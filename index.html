@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 9 - Three.js</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <div>
+        <button id="startWalking" onclick="caminar()">Comenzar a Caminar</button>
+        <button id="stopWalking" onclick="detenerse()">Detener Caminar</button>
+    </div>
+    <div id="pantalla_carga"> Cargando... </div>
+    <div id="menu_inicio">
+        <input type="file" id="fileInput" accept=".pl">
+        <button id="boton_cargarlaberinto"></button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/dibujar.js"></script>
+</body>
+
+</html>

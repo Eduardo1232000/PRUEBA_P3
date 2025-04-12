@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#pantalla_carga {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 3s ease, opacity 8s ease;
+}
+
+.slide-up {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+#menu_inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/fondo_menu.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 3s ease, opacity 8s ease;
+}
+
+#boton_cargarlaberinto{
+    background-image: url('../img/boton_cargar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20vw;           /* 20% del ancho de la ventana */
+    aspect-ratio: 6 / 1;   /* Mantiene forma cuadrada */
+    
+    max-width: 500px;      /* Tamaño máximo si querés limitarlo */
+    min-width: 60px;       /* Tamaño mínimo para evitar que sea muy chico */
+
+    border: none;
+    cursor: pointer;
+}
+
+#boton_cargarlaberinto:hover{
+    background-image: url('../img/boton_cargar_select.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20vw;           /* 20% del ancho de la ventana */
+    aspect-ratio: 6 / 1;   /* Mantiene forma cuadrada */
+    
+    max-width: 500px;      /* Tamaño máximo si querés limitarlo */
+    min-width: 60px;       /* Tamaño mínimo para evitar que sea muy chico */
+
+    border: none;
+    cursor: pointer;
+}
+
+#fileInput {
+    opacity: 0.01;
+    position: absolute;
+    z-index: 1;
+}
