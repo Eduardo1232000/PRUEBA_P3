@@ -4,27 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 9 - Three.js</title>
+    <title>Proyecto 3 - Mazebot</title>
     <link rel="stylesheet" href="css/index.css">
-
 </head>
 
 <body>
     <div>
-        <button id="startWalking" onclick="caminar()">Comenzar a Caminar</button>
-        <button id="stopWalking" onclick="detenerse()">Detener Caminar</button>
+        <nav id="navbar_seleccion">
+            <button id = "boton_algoritmo1" onclick="algoritmo1()">Algoritmo 1</button>
+            <button id = "boton_algoritmo2" onclick="algoritmo2()">Algoritmo 2</button>
+            <button id = "boton_algoritmo3" onclick="algoritmo3()">Algoritmo 3</button>
+            <button id = "boton_lab_cambiar_mapa" onclick="cambiar_mapa()">Cambiar mapa</button>
+            <button id = "boton_algoritmo_iniciar" onclick="iniciar_laberinto()">Iniciar</button>
+        </nav>
+
     </div>
-    <div id="pantalla_carga"> Cargando... </div>
+    <div id="pantalla_carga">
+        <label id="label_cargando">Cargando...</label>
+    </div>
     <div id="menu_inicio">
-        <input type="file" id="fileInput" accept=".pl">
+        <input type="file" id="fileInput" accept=".json">
         <button id="boton_cargarlaberinto"></button>
     </div>
+    <div id="ventana_final" class="emergente">
+        <div class="emergente-content">
+          <span class="cerrar_emergente" onclick="cerrar_emergente()">&times;</span>
+          <h2>¡Ha finalizado el Recorrido</h2>
+          <p>Presiona el boton de la accion que deseas realizar.</p>
+          <button onclick="reiniciar_animacion()" class="boton_emergente">Reiniciar la animacion</button>
+          <button onclick="cerrar_emergente()" class="boton_emergente">Utilizar otro algoritmo</button>
+          <button onclick="emergente_cambiar_mapa()" class="boton_emergente">Cargar nuevo laberinto</button>
+        </div>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/dibujar.js"></script>
+    <script src="./js/movimiento.js"></script>
+    <script src="./js/emergente.js"></script>
+    <script src="./js/algoritmo1.js"></script>
+    <script src="./js/algoritmo2.js"></script>
+    <script src="./js/algoritmo3.js"></script>
 </body>
 
 </html>
