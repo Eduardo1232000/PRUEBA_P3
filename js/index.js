@@ -69,6 +69,7 @@ let movimientoData = null;
 let itemDiamante = null
 const personajeContenedor = new THREE.Group();      //CREAMOS UN CONTENEDOR PARA EL PERSONAJE
 scene.add(personajeContenedor);
+let saltar_animacion = false
 
 // MODELO 3D 
 const loader = new THREE.GLTFLoader();
@@ -209,6 +210,10 @@ function iniciar_laberinto() {
     
 
 
+}
+
+function boton_saltar_animacion() {
+    saltar_animacion = true
 }
 
 async function recorrer_laberinto(camino) {

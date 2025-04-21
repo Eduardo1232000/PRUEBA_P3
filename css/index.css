@@ -243,3 +243,19 @@ button {
     background-image: url('../img/botonmarcado.png');
     color: yellow;
 }
+
+#boton_saltar_animacion{
+    position: fixed;
+    right: 2vw;
+    top: 0vh;
+    width: 20vh;
+    height: 7vh;
+    font-size: 2.5vh;
+    background-image: url('../img/botonvacio.png');
+    color: white;
+}
+
+#boton_saltar_animacion:hover {
+    background-image: url('../img/botonmarcado.png');
+    color: yellow;
+}

@@ -9,15 +9,16 @@
 </head>
 
 <body>
+    <button id="boton_saltar_animacion" onclick="boton_saltar_animacion()">Ver camino Final</button>
     <div>
         <nav id="navbar_seleccion">
-            <button id = "boton_algoritmo1" onclick="algoritmo1()">Algoritmo 1</button>
-            <button id = "boton_algoritmo2" onclick="algoritmo2()">Algoritmo 2</button>
-            <button id = "boton_algoritmo3" onclick="algoritmo3()">Algoritmo 3</button>
-            <button id = "boton_lab_cambiar_mapa" onclick="cambiar_mapa()">Cambiar mapa</button>
-            <button id = "boton_algoritmo_iniciar" onclick="iniciar_laberinto()">Iniciar</button>
+            <button id="boton_algoritmo1" onclick="algoritmo1()">Algoritmo 1</button>
+            <button id="boton_algoritmo2" onclick="algoritmo2()">Algoritmo 2</button>
+            <button id="boton_algoritmo3" onclick="algoritmo3()">Algoritmo 3</button>
+            <button id="boton_lab_cambiar_mapa" onclick="cambiar_mapa()">Cambiar mapa</button>
+            <button id="boton_algoritmo_iniciar" onclick="iniciar_laberinto()">Iniciar</button>
         </nav>
-
+        
     </div>
     <div id="pantalla_carga">
         <label id="label_cargando">Cargando...</label>
@@ -28,14 +29,15 @@
     </div>
     <div id="ventana_final" class="emergente">
         <div class="emergente-content">
-          <span class="cerrar_emergente" onclick="cerrar_emergente()">&times;</span>
-          <h2>¡Ha finalizado el Recorrido</h2>
-          <p>Presiona el boton de la accion que deseas realizar.</p>
-          <button onclick="reiniciar_animacion()" class="boton_emergente">Reiniciar la animacion</button>
-          <button onclick="cerrar_emergente()" class="boton_emergente">Utilizar otro algoritmo</button>
-          <button onclick="emergente_cambiar_mapa()" class="boton_emergente">Cargar nuevo laberinto</button>
+            <span class="cerrar_emergente" onclick="cerrar_emergente()">&times;</span>
+            <h2>¡Ha finalizado el Recorrido</h2>
+            <p>Presiona el boton de la accion que deseas realizar.</p>
+            <button onclick="reiniciar_animacion()" class="boton_emergente">Reiniciar la animacion</button>
+            <button onclick="cerrar_emergente()" class="boton_emergente">Utilizar otro algoritmo</button>
+            <button onclick="emergente_cambiar_mapa()" class="boton_emergente">Cargar nuevo laberinto</button>
         </div>
-      </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>

@@ -104,7 +104,7 @@ async function resolverCaminoDijkstra(inicio, fin) {
     const distancias = {};
     const anteriores = {};
 
-    let camino_temp=[]
+    let camino_temp = []
 
     distancias[inicio] = 0;
     anteriores[inicio] = "INICIO";
@@ -145,9 +145,12 @@ async function resolverCaminoDijkstra(inicio, fin) {
                 }
             }
         }
-        console.log("Ruta:", estructura.encontrarOrigen(actual));
-        camino_temp = estructura.crear_lista_nodos_recorrer(actual);
-        await mover_desde_inicio_hasta_nodo(camino_temp.reverse())
+        if (saltar_animacion == false) {
+            console.log("Ruta:", estructura.encontrarOrigen(actual));
+            camino_temp = estructura.crear_lista_nodos_recorrer(actual);
+            await mover_desde_inicio_hasta_nodo(camino_temp.reverse())
+        }
+
     }
     console.log("Ruta:", estructura.encontrarOrigen(fin));
     let camino = estructura.crear_lista_nodos_recorrer(fin);
@@ -163,9 +166,9 @@ async function resolverCaminoDijkstra(inicio, fin) {
     console.log("FINALICE")
     //MOSTRAR LA VENTANA EMERGENTE
     abrir_emergente()
-
     mover_personaje_inicio(personajeContenedor, info_laberinto.inicio[0], info_laberinto.inicio[1])
     eliminar_bloques_recorridos()
     document.getElementById("navbar_seleccion").style.display = "block";
+    saltar_animacion = false
     return camino.reverse()
 }
